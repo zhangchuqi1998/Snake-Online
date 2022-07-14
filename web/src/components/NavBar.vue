@@ -5,13 +5,13 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <router-link class="nav-link" :to="{name: 'pk_index'}">Battle</router-link>
+          <router-link :class="route_name == 'pk_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'pk_index'}">Battle</router-link>
         </li>
         <li class="nav-item">
-           <router-link class="nav-link" :to="{name: 'record_index'}">Record</router-link>
+           <router-link :class="route_name == 'record_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'record_index'}">Record</router-link>
         </li>
         <li class="nav-item">
-           <router-link class="nav-link" :to="{name: 'leadingboard_index'}">LeadingBoard</router-link>
+           <router-link :class="route_name == 'leadingboard_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'leadingboard_index'}">LeadingBoard</router-link>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -35,6 +35,18 @@
 
 <script>
 
+import { useRoute } from 'vue-router'
+import { computed } from 'vue'
+
+export default {
+    setup() {
+        const route = useRoute();
+        let route_name = computed(() => route.name)
+        return {
+            route_name
+        }
+    }
+}
 </script>
 
 <style scoped>

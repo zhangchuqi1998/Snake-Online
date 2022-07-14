@@ -1,9 +1,18 @@
 <template>
-    <div>My Bot</div>
+    <ContentField>
+        My Bot
+    </ContentField>
 </template>
 
 
 <script>
+    import ContentField from "../../../components/ContentField.vue"
+
+    export default {
+        components: {
+            ContentField
+        }
+    }
 </script>
 
 <style scoped>
