@@ -15,7 +15,7 @@ import java.util.UUID;
 @Component
 public class JwtUtil {
     public static final long JWT_TTL = 60 * 60 * 1000L * 24 * 14;
-    public static final String JWT_KEY = "FHGASUWDJfasdsaH23523842374612348761278264SSS";
+    public static final String JWT_KEY = "FHGASUWDJfasdsaH235238423746123487ahusdhwaudhq8a23rt7q3tfg2761278264SSS";
 
     public static String getUUID() {
         return UUID.randomUUID().toString().replaceAll("-", "");
