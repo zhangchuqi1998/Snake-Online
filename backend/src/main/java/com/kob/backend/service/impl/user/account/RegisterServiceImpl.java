@@ -22,7 +22,7 @@ public class RegisterServiceImpl implements RegisterService {
 
 
     @Override
-    public Map<String, String> register(String username, String password, String confirmedpassword) {
+    public Map<String, String> register(String username, String password, String confirmedPassword) {
 
 
         Map<String, String> map = new HashMap<>();
@@ -30,7 +30,7 @@ public class RegisterServiceImpl implements RegisterService {
             map.put("error_message", "username can not be empty");
             return map;
         }
-        if (password == null || confirmedpassword == null) {
+        if (password == null || confirmedPassword == null) {
             map.put("error_message", "password can not be empty");
             return map;
         }
@@ -39,7 +39,7 @@ public class RegisterServiceImpl implements RegisterService {
             map.put("error_message", "username can not be empty");
             return map;
         }
-        if (password.length() == 0 || confirmedpassword.length() == 0) {
+        if (password.length() == 0 || confirmedPassword.length() == 0) {
             map.put("error_message", "password can not be empty");
             return map;
         }
@@ -48,11 +48,11 @@ public class RegisterServiceImpl implements RegisterService {
             map.put("error_message", "username length can not exceed 100");
             return map;
         }
-        if (password.length() > 100 || confirmedpassword.length() > 100) {
+        if (password.length() > 100 || confirmedPassword.length() > 100) {
             map.put("error_message", "password length can not exceed 100");
             return map;
         }
-        if (!password.equals(confirmedpassword)) {
+        if (!password.equals(confirmedPassword)) {
             map.put("error_message", "two passwords are not match");
             return map;
         }
