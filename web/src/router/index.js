@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PkIndexView from "../views/pk/PkIndexView"
 import RecordIndexView from "../views/record/RecordIndexView"
 import LeadingBoardView from "../views/leadingboard/LeadingBoardView"
-import UserBotIndexView from "../views/user/bot/BotIndexView"
+import UserBotIndexView from "../views/user/bot/UserBotIndexView"
 import NotFound from "../views/error/NotFound"
 import UserAccountLoginView from "../views/user/account/UserAccountLoginView"
 import UserAccountRegister from "../views/user/account/UserAccountRegisterView"
